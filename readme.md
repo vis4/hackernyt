@@ -1,6 +1,8 @@
 # heackernyt
 
-[https://vis4.net/hackernyt/](live demo)
+
+[live demo](https://vis4.net/hackernyt)
+
 
 for local development:
 
