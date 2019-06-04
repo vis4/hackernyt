@@ -1,62 +1,62 @@
 html, body {
-	position: relative;
-	width: 100%;
-	height: 100%;
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
 body {
-	color: #333;
-	margin: 0;
-	padding: 0px;
-	box-sizing: border-box;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
-
+.night-mode body { color: #ccc; }
 a {
-	text-decoration: none;
+    text-decoration: none;
 }
 
 a:hover {
-	text-decoration: underline;
+    text-decoration: underline;
 }
 
 a:visited {
-	color: rgb(0,80,160);
+    color: rgb(0,80,160);
 }
 
 label {
-	display: block;
+    display: block;
 }
 
 input, button, select, textarea {
-	font-family: inherit;
-	font-size: inherit;
-	padding: 0.4em;
-	margin: 0 0 0.5em 0;
-	box-sizing: border-box;
-	border: 1px solid #ccc;
-	border-radius: 2px;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 0.4em;
+    margin: 0 0 0.5em 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 2px;
 }
 
 input:disabled {
-	color: #ccc;
+    color: #ccc;
 }
 
 input[type="range"] {
-	height: 0;
+    height: 0;
 }
 
 button {
-	background-color: #f4f4f4;
-	outline: none;
+    background-color: #f4f4f4;
+    outline: none;
 }
 
 button:active {
-	background-color: #ddd;
+    background-color: #ddd;
 }
 
 button:focus {
-	border-color: #666;
+    border-color: #666;
 }
 
 h1 {
@@ -67,7 +67,10 @@ h1 {
     margin: 0;
     position: relative;
 }
-
+.night-mode h1 {
+    color: #fff;
+    background: #1c0b00;
+}
 h1 select {
     position: absolute;
     top: 5px;
@@ -78,23 +81,80 @@ h1 select {
     padding: 7px 8px;
 }
 
-h1 a {
+h1 .links {
+    display: inline-block;
+    padding-left: 1em;
+}
+h1 .links a {
     font-size: 16px;
     font-weight: 400;
     display: inline-block;
-    padding-left: 1em;
     padding-top: 1px;
     opacity: 0.5;
 }
-h1 a:hover {
+h1 .links a + a {
+    padding-left: 1em;
+}
+
+h1 .links a:hover {
     text-decoration: underline;
 }
 
+ol {
+    margin: 0;
+    padding: 1ex 2em;
+    background: #f6f6ef;
+}
+.night-mode ol {
+    background: #343433;
+}
+li {
+    padding: 1ex 0;
+    color: #aaa;
+}
+.night-mode li {
+    color: #888;
+}
+a .title {
+    display: inline;
+    color: black;
+}
+.night-mode a .title {
+    color: #eee;
+}
+a:visited .title {
+    color: gray;
+}
+a:hover {
+    text-decoration: none;
+}
+a:hover .title {
+    text-decoration: underline;
+}
+.category {
+    font-size: 85%;
+    color: #828282;
+}
+.description {
+    font-size: 18px;
+    color: #999;
+}
+a:visited .category,
+a:visited .description {
+    color: #bbb;
+}
+.night-mode a:visited .title {
+    color: #999;
+}
+.night-mode a:visited .category,
+.night-mode a:visited .description {
+    color: #666;
+}
+
 @media (max-width: 600px) {
-    h1 a {
+    h1 .links {
         display: block;
         padding-left: 0;
         margin-top: 5px;
-        max-width: 200px;
     }
 }

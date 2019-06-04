@@ -16,6 +16,8 @@
     let activeFeed = 'Most Shared';
     let _activeFeed = '';
     let showDescriptions = false;
+    const hours = (new Date()).getHours();
+    let nightMode = hours < 5 || hours > 20;
 
     onMount(() => {
         if (window.location.hash) {
@@ -35,66 +37,36 @@
     });
 </script>
 
-<style>
-    ol {
-        margin: 0;
-        padding: 1ex 2em;
-        background: #f6f6ef;
-    }
-    li {
-        padding: 1ex 0;
-        color: #aaa;
-    }
-    a .title {
-        display: inline;
-        color: black;
-    }
-    a:visited .title {
-        color: gray;
-    }
-    a:hover {
-        text-decoration: none;
-    }
-    a:hover .title {
-        text-decoration: underline;
-    }
-    .category {
-        font-size: 85%;
-        color: #828282;
-    }
-    .description {
-        font-size: 18px;
-        color: #999;
-    }
-    a:visited .category,
-    a:visited .description {
-        color: #bbb;
-    }
-</style>
+<div class:night-mode={nightMode}>
+    <h1>{feed.title}
+        <div class="links">
+            <a on:click="{() => showDescriptions = !showDescriptions}">
+                {showDescriptions ?'hide':'show'} descriptions
+            </a>
+            <a on:click="{() => nightMode = !nightMode}">
+                {nightMode ?'day':'night'}
+            </a>
+        </div>
+        <select bind:value="{activeFeed}">
+            {#each feedIds as id}
+            <option>{id}</option>
+            {/each}
+        </select>
+    </h1>
 
-<h1>{feed.title}
-    <a on:click="{() => showDescriptions = !showDescriptions}">
-        {showDescriptions ?'hide':'show'} descriptions
-    </a>
-    <select bind:value="{activeFeed}">
-        {#each feedIds as id}
-        <option>{id}</option>
-        {/each}
-    </select>
-</h1>
-
-<ol>
-{#each items as item,i}
-    <li>
-        <a title="{item.description}" target="_blank" href="{item.links[0].url}">
-            <div class="title">{item.title}</div>
-            {#if showDescriptions}
-            <span class="description">
-                <br>{item.description}
-            </span>
-            {/if}
-            <span class="category">({dayjs(item.published).fromNow()})</span>
-        </a>
-    </li>
-{/each}
-</ol>
+    <ol>
+    {#each items as item,i}
+        <li>
+            <a title="{item.description}" target="_blank" href="{item.links[0].url}">
+                <div class="title">{item.title}</div>
+                {#if showDescriptions}
+                <span class="description">
+                    <br>{item.description}
+                </span>
+                {/if}
+                <span class="category">({dayjs(item.published).fromNow()})</span>
+            </a>
+        </li>
+    {/each}
+    </ol>
+</div>
