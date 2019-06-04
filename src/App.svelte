@@ -57,7 +57,7 @@
     <ol>
     {#each items as item,i}
         <li>
-            <a title="{item.description}" target="_blank" href="{item.links[0].url}">
+            <a title="{item.description}" href="{item.links[0].url}">
                 <div class="title">{item.title}</div>
                 {#if showDescriptions}
                 <span class="description">
