@@ -1,0 +1,13 @@
+ {
+    "Home Page": "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
+    "Most Viewed": "https://rss.nytimes.com/services/xml/rss/nyt/MostViewed.xml",
+    "Most Shared": "https://rss.nytimes.com/services/xml/rss/nyt/MostShared.xml",
+    "World": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
+    "Europe": "https://rss.nytimes.com/services/xml/rss/nyt/Europe.xml",
+    "U.S.": "https://rss.nytimes.com/services/xml/rss/nyt/US.xml",
+    "Business": "https://rss.nytimes.com/services/xml/rss/nyt/Business.xml",
+    "Climate": "https://rss.nytimes.com/services/xml/rss/nyt/Climate.xml",
+    "Technology": "https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml",
+    "Sports": "https://rss.nytimes.com/services/xml/rss/nyt/Sports.xml",
+    "Upshot": "https://rss.nytimes.com/services/xml/rss/nyt/Upshot.xml"
+}
