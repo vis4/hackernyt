@@ -80,6 +80,10 @@ h1 select {
     border: 0;
     padding: 7px 8px;
 }
+.night-mode h1 select {
+    background: #343433;
+    color: white;
+}
 
 h1 .links {
     display: inline-block;
