@@ -1,4 +1,14 @@
- {
+{
+    "Graphics": [
+        "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/spotlight/graphics/rss.xml",
+        "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/by/larry-buchanan/rss.xml",
+        "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/by/josh-katz/rss.xml",
+        "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/by/matthew-bloch/rss.xml",
+        "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/by/jonathan-corum/rss.xml",
+        "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/by/kk-rebecca-lai/rss.xml",
+        "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/by/charlie-smart/rss.xml",
+        "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/by/karen-yourish/rss.xml"
+    ],
     "Home Page": "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
     "Most Viewed": "https://rss.nytimes.com/services/xml/rss/nyt/MostViewed.xml",
     "Most Shared": "https://rss.nytimes.com/services/xml/rss/nyt/MostShared.xml",

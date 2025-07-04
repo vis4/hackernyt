@@ -140,9 +140,17 @@ a:hover .title {
     color: #828282;
 }
 .description {
-    font-size: 18px;
+    font-size: 16px;
     color: #999;
 }
+.description b {
+    font-weight: normal;
+    color: #ff6600;
+}
+.night-mode .description b {
+    color: #ff9d5c;
+}
+
 a:visited .category,
 a:visited .description {
     color: #bbb;
